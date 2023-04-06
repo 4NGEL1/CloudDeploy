@@ -1,0 +1,19 @@
+{
+  "name": "testservice",
+  "version": "1.0.0",
+  "description": "Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4NGEL1/CloudDeploy.git"
+  },
+  "author": "Angel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/4NGEL1/CloudDeploy/issues"
+  },
+  "homepage": "https://github.com/4NGEL1/CloudDeploy#readme"
+}
