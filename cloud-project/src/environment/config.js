@@ -1,5 +1,5 @@
 
-const API_KEY_GOOGLE = "API_KEY_TEST";
+const API_KEY_GOOGLE = "694592382962-9spp2vuc00amkevnj5osvppv3823ntt6.apps.googleusercontent.com";
 
 export const enviroment =
 {
