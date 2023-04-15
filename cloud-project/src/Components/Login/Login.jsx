@@ -5,6 +5,7 @@ import { refreshTokenSetup } from '../../utils/refreshToken';
 import { enviroment } from '../../environment/config';
 import { gapi } from 'gapi-script';
 import './Login.css'
+import Auth from '../Auth/AuthRoute'; '../Auth/AuthRoute'
 
 
 const clientId = enviroment.GOOGLE_SECRET;
@@ -50,7 +51,10 @@ function Login() {
           cookiePolicy = {'single_host_origin'}
           style = {{ marginTop: '100px' }}
           isSignedIn = {false}
-        />
+        >
+          <p className='login-google-p'>Iniciar sesión</p>
+        </GoogleLogin> 
+        <Auth profile = {profile}></Auth>
         <div>
         <a href="https://aws.amazon.com/es/" target="_blank">
             <img src='src/assets/AWS.png' className="logo" alt="AWS logo" />

@@ -2,12 +2,20 @@ import { useState } from 'react'
 import './Home.css'
 import reactLogo from '../../assets/react.svg'
 import viteLogo from '/vite.svg'
+import Nav from '../nav/Nav'
+import { Link, Navigate, useLocation } from 'react-router-dom';
 
-function Home(){
-    const [count, setCount] = useState(0)
-
+function Home({profile}){
+    let props = useLocation();
+    const [count, setCount] = useState(0);
+    const [data, setData] = useState(props.state.profile);
+    console.log('Home');
+    console.log(useLocation());
+    console.log(props.state);
+    console.log(data);
   return (
     <div className="App">
+      <Nav profile={data}></Nav>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />

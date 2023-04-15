@@ -17,6 +17,11 @@
     color: whitesmoke;
 }
 
+.login-google-p{
+    color: black;
+    font-weight: bolder;
+}
+
 .logo {
     height: 6em;
     padding: 1.5em;
