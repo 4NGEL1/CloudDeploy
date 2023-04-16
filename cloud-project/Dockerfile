@@ -3,7 +3,7 @@ WORKDIR /usr/src/app
 COPY ./package.json .
 COPY ./vite.config.js .
 COPY ./index.html .
-COPY ./src ./
+COPY ./src ./src
 RUN npm install  --legacy-peer-deps
 EXPOSE 8080
 CMD ["npm", "run", "dev"]

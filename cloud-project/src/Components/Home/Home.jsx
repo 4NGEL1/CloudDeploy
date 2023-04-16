@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './Home.css'
 import reactLogo from '../../assets/react.svg'
-import viteLogo from '/vite.svg'
+import viteLogo from '../../assets/vite.svg'
 import Nav from '../nav/Nav'
 import { useLocation } from 'react-router-dom';
 
