@@ -24,10 +24,6 @@ function Login() {
   }, []);
 
   const onSuccess = (res) => {
-    console.log('Login Success: currentUser:', res.profileObj);
-    // alert(
-    //   `Autenticación exitosa ${res.profileObj.name} 😍.`
-    // );
     setProfile(res.profileObj);
     refreshTokenSetup(res);
   };

@@ -3,16 +3,12 @@ import './Home.css'
 import reactLogo from '../../assets/react.svg'
 import viteLogo from '/vite.svg'
 import Nav from '../nav/Nav'
-import { Link, Navigate, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 function Home({profile}){
     let props = useLocation();
     const [count, setCount] = useState(0);
     const [data, setData] = useState(props.state.profile);
-    console.log('Home');
-    console.log(useLocation());
-    console.log(props.state);
-    console.log(data);
   return (
     <div className="App">
       <Nav profile={data}></Nav>
