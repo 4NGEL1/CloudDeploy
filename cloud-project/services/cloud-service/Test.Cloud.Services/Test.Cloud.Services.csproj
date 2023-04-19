@@ -21,8 +21,4 @@
     <ProjectReference Include="..\Test.Cloud.Persistence\Test.Cloud.Persistence.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Tests\Impl\" />
-  </ItemGroup>
-
 </Project>

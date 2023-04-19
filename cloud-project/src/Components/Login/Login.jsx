@@ -5,7 +5,7 @@ import { refreshTokenSetup } from '../../utils/refreshToken';
 import { enviroment } from '../../environment/config';
 import { gapi } from 'gapi-script';
 import './Login.css'
-import Auth from '../Auth/AuthRoute'; '../Auth/AuthRoute'
+import Auth from '../Auth/AuthRoute';
 
 
 const clientId = enviroment.GOOGLE_SECRET;

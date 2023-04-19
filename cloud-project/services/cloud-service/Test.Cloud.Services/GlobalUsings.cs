@@ -2,3 +2,9 @@
 global using AutoMapper;
 global using Test.Cloud.Services.Mapping;
 global using Microsoft.Extensions.DependencyInjection;
+global using Test.Cloud.Common.DTOs.Responses;
+global using Test.Cloud.Persistence.DAO.Tests;
+global using Test.Cloud.Model.Entities.Common;
+global using Test.Cloud.Services.Utils;
+global using Test.Cloud.Services.Tests;
+global using Test.Cloud.Services.Tests.Impl;

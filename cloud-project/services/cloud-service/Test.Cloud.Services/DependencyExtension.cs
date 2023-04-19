@@ -28,6 +28,7 @@ namespace Test.Cloud.Services
         /// <returns>Service collection.</returns>
         public static IServiceCollection AddServices(this IServiceCollection services)
         {
+            services.AddTransient<IServiceUser, ServiceUser>();
             return services;
         }
     }

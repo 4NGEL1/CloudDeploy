@@ -23,6 +23,15 @@ namespace Test.Cloud.Api
             webApplication.Services.AddSwaggerGen();
             webApplication.Services.AddApplicationInsightsTelemetry();
 
+            webApplication.Services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy", build =>
+                {
+                    build.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+                    build.WithOrigins("http://localhost:8080").AllowAnyMethod().AllowAnyHeader().AllowCredentials();
+                });
+            });
+
             return webApplication.Build();
         }
 
@@ -42,6 +51,7 @@ namespace Test.Cloud.Api
             app.UseHttpsRedirection();
             app.UseAuthorization();
             app.MapControllers();
+            app.UseCors("CorsPolicy");
             return app;
         }
     }

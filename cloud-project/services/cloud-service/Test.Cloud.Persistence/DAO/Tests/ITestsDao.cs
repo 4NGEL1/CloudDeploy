@@ -13,5 +13,10 @@ namespace Test.Cloud.Persistence.DAO.Tests
     /// </summary>
     public interface ITestsDao
     {
+        Task<User> GetUser(string email);
+
+        Task<bool> InsertUser(User user);
+
+        Task<bool> Update(string email);
     }
 }

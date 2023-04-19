@@ -8,3 +8,5 @@ global using Serilog;
 global using Serilog.Events;
 global using StackExchange.Redis;
 global using Steeltoe.Extensions.Configuration.Placeholder;
+global using Test.Cloud.Facade.Tests;
+global using Test.Cloud.Model.Entities.Common;

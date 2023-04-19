@@ -14,6 +14,8 @@ namespace Test.Cloud.Persistence.Context
         {
         }
 
+        public virtual DbSet<User> User { get; set; }
+
         /// <summary>
         /// Metho On Model Creating.
         /// </summary>

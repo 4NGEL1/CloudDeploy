@@ -1,12 +1,4 @@
 {
-  "iisSettings": {
-    "windowsAuthentication": false,
-    "anonymousAuthentication": true,
-    "iisExpress": {
-      "applicationUrl": "http://localhost:1221",
-      "sslPort": 0
-    }
-  },
   "profiles": {
     "Test.Cloud.Api": {
       "commandName": "Project",
@@ -15,15 +7,12 @@
       "launchUrl": "",
       "applicationUrl": "http://localhost:1221",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    },
-    "IIS Express": {
-      "commandName": "IISExpress",
-      "launchBrowser": true,
-      "launchUrl": "swagger",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "MYSQL_DEPLOYMENT_SERVICE_HOST": "localhost",
+        "MYSQL_DEPLOYMENT_SERVICE_PORT": "3001",
+        "MYSQL_DEPLOYMENT_SERVICE_NAME": "test",
+        "MYSQL_DEPLOYMENT_SERVICE_USER": "root",
+        "MYSQL_DEPLOYMENT_SERVICE_PASSWORD": "admin"
       }
     }
   }

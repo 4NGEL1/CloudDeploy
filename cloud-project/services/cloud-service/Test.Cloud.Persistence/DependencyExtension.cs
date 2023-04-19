@@ -16,19 +16,19 @@ namespace Test.Cloud.Persistence
         {
             services.AddDbContextPool<DatabaseContext>(options =>
             {
-                options.UseSqlServer(
+                options.UseMySql(
                     configuration.GetConnectionString(nameof(DatabaseContext)),
-                    sqlServerOptionsAction: sqlOptions =>
+                    ServerVersion.AutoDetect(configuration.GetConnectionString(nameof(DatabaseContext))),
+                    options =>
                     {
-                        sqlOptions.EnableRetryOnFailure(
-                        maxRetryCount: 5,
-                        maxRetryDelay: TimeSpan.FromSeconds(15),
-                        errorNumbersToAdd: null);
+                        options.EnableRetryOnFailure(
+                            maxRetryCount: 10,
+                            maxRetryDelay: TimeSpan.FromSeconds(30),
+                            errorNumbersToAdd: null);
                     });
             });
 
             services.AddScoped<ITestsDao, TestsDao>();
-            
             return services;
         }
     }

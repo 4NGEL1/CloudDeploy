@@ -21,8 +21,4 @@
     <ProjectReference Include="..\Test.Cloud.Services\Test.Cloud.Services.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Tests\Impl\" />
-  </ItemGroup>
-
 </Project>
