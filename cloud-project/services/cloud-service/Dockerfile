@@ -17,4 +17,6 @@ RUN apk update
 ENV TZ America/Mexico_City
 EXPOSE 1221
 
+ENTRYPOINT ["dotnet", "ef", "migrations", "add", "InitialCreate"]
+ENTRYPOINT ["dotnet", "ef", "database", "update"]
 ENTRYPOINT ["dotnet", "Test.Cloud.Api.dll"]

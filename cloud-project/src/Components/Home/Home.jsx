@@ -38,11 +38,11 @@ function Home({profile}){
           {count}
         </p>
         <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+          <code>Hola Mundo</code>
         </p>
       </div>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+        Amazon Web Service.
       </p>
     </div>
   )

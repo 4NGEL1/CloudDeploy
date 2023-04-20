@@ -1,0 +1,44 @@
+version: '3.1'
+
+services:
+
+  mysql-db:
+    container_name: mysql
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_USER: admin
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: test
+    ports:
+      - 3001:3306
+      
+  backend-service:
+    container_name: backend
+    restart: "always"
+    build: 
+      context: ./cloud-project/services/cloud-service
+      dockerfile: ./Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      MYSQL_DEPLOYMENT_SERVICE_HOST: "localhost"
+      MYSQL_DEPLOYMENT_SERVICE_PORT: "3001"
+      MYSQL_DEPLOYMENT_SERVICE_NAME: "test"
+      MYSQL_DEPLOYMENT_SERVICE_USER: "root"
+      MYSQL_DEPLOYMENT_SERVICE_PASSWORD: "admin"
+    ports:
+      - "1221:1221"
+    depends_on:
+      - mysql-db
+      
+  frontend-service:
+    container_name: frontend
+    restart: "always"
+    build: 
+      context: ./cloud-project
+      dockerfile: ./Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql-db
