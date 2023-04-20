@@ -1,0 +1,16 @@
+section.container{
+    border: 1px solid transparent;
+    border-color: #646cff;
+    border-radius: 21px;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    transition: border-color 0.25s;
+}
+
+.letter{
+    width: 14px;
+    padding: 1px;
+    cursor: pointer;
+}

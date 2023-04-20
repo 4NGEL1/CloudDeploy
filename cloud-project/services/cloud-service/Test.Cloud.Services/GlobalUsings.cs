@@ -8,3 +8,5 @@ global using Test.Cloud.Model.Entities.Common;
 global using Test.Cloud.Services.Utils;
 global using Test.Cloud.Services.Tests;
 global using Test.Cloud.Services.Tests.Impl;
+global using Test.Cloud.Persistence.DAO.Phrase;
+global using Test.Cloud.Services.Phrases;

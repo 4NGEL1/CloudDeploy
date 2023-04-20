@@ -5,3 +5,5 @@ global using Test.Cloud.Model.Entities.Common;
 global using Test.Cloud.Services.Tests;
 global using Test.Cloud.Facade.Tests;
 global using Test.Cloud.Facade.Tests.Impl;
+global using Test.Cloud.Services.Phrases;
+global using Test.Cloud.Facade.Phrases;

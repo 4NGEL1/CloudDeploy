@@ -1,3 +1,4 @@
+
 namespace Test.Cloud.Services
 {
     /// <summary>
@@ -29,6 +30,7 @@ namespace Test.Cloud.Services
         public static IServiceCollection AddServices(this IServiceCollection services)
         {
             services.AddTransient<IServiceUser, ServiceUser>();
+            services.AddTransient<IPhraseService, PhraseService>();
             return services;
         }
     }

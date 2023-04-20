@@ -1,3 +1,4 @@
+
 namespace Test.Cloud.Persistence
 {
     /// <summary>
@@ -29,6 +30,7 @@ namespace Test.Cloud.Persistence
             });
 
             services.AddScoped<ITestsDao, TestsDao>();
+            services.AddScoped<IPhraseDao, PhraseDao>();
             return services;
         }
     }

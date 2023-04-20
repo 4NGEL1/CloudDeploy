@@ -3,6 +3,8 @@
     flex-direction: row;
     width: auto;
     align-items: center;
+    padding: auto;
+    justify-content: space-between;
 }
 
 .Card{
@@ -32,4 +34,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.git-logo{
+    max-width: 50px;
+}
+
+.git-logo-div:hover{
+    filter: drop-shadow(0 0 2em #b50bdbaa);
 }

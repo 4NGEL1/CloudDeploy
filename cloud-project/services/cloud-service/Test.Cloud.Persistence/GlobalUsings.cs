@@ -8,3 +8,4 @@ global using Microsoft.Extensions.Configuration;
 global using Microsoft.Extensions.DependencyInjection;
 global using System.Reflection;
 global using Test.Cloud.Model.Entities.Common;
+global using Test.Cloud.Persistence.DAO.Phrase;

@@ -1,3 +1,4 @@
+
 namespace Test.Cloud.Facade
 {
     /// <summary>
@@ -13,6 +14,7 @@ namespace Test.Cloud.Facade
         public static IServiceCollection AddFacade(this IServiceCollection services)
         {
             services.AddTransient<IUserFacade, UserFacade>();
+            services.AddTransient<IPhraseFacade, PhraseFacade>();
             return services;
         }
     }

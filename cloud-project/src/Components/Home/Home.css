@@ -1,4 +1,4 @@
-#root {
+.App {
     max-width: 1280px;
     margin: 0 auto;
     padding: 2rem;
@@ -16,6 +16,10 @@
   }
   .logo.react:hover {
     filter: drop-shadow(0 0 2em #61dafbaa);
+  }
+
+  .logo.amazon:hover{
+    filter: drop-shadow(0 0 2em #ec9428aa);
   }
   
   @keyframes logo-spin {

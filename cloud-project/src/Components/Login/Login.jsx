@@ -6,13 +6,14 @@ import { enviroment } from '../../environment/config';
 import { gapi } from 'gapi-script';
 import './Login.css'
 import Auth from '../Auth/AuthRoute';
-
+import { createContext} from 'react';
+export const AuthContextV = createContext(null);
 
 const clientId = enviroment.GOOGLE_SECRET;
 
 function Login() {
   const [ profile, setProfile ] = useState([]);
-
+  const [items, setItems] = useState([]);
   useEffect(() => {
     function start() {
       gapi.client.init({
@@ -22,6 +23,12 @@ function Login() {
     }
     gapi.load('client:auth2', start);
   }, []);
+
+  useEffect(() => {
+    if(profile){
+      localStorage.setItem("Auth", JSON.stringify(profile));
+    }
+  }, [profile]);
 
   const onSuccess = (res) => {
     setProfile(res.profileObj);
@@ -49,7 +56,7 @@ function Login() {
           isSignedIn = {false}
         >
           <p className='login-google-p'>Iniciar sesión</p>
-        </GoogleLogin> 
+        </GoogleLogin>
         <Auth profile = {profile}></Auth>
         <div>
         <a href="https://aws.amazon.com/es/" target="_blank">
