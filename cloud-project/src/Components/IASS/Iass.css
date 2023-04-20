@@ -1,0 +1,28 @@
+.iass{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.letter{
+    color: antiquewhite;
+}
+
+.iass.services{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.iass.components{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.iass.svg{
+    max-width: 30%;
+}

@@ -1,0 +1,19 @@
+{
+  "profiles": {
+    "Test.Cloud.Api": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "",
+      "applicationUrl": "http://localhost:1221",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "MYSQL_DEPLOYMENT_SERVICE_HOST": "localhost",
+        "MYSQL_DEPLOYMENT_SERVICE_PORT": "3001",
+        "MYSQL_DEPLOYMENT_SERVICE_NAME": "test",
+        "MYSQL_DEPLOYMENT_SERVICE_USER": "root",
+        "MYSQL_DEPLOYMENT_SERVICE_PASSWORD": "admin"
+      }
+    }
+  }
+}
