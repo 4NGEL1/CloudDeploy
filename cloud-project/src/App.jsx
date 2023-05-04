@@ -24,7 +24,7 @@ function App() {
         <Route exact path = "/cloud" element = {<Cloud/>} />
         <Route exact path = "/iass" element = {<Iass/>} />
         <Route exact path = "/pass" element = {<Pass/>} />
-        <Route exact path = "/sass" element = {<Pass/>} />
+        <Route exact path = "/sass" element = {<Sass/>} />
       </Routes>
       <Footer></Footer>
     </Router>

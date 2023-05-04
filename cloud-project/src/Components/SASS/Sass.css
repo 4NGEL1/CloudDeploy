@@ -1,0 +1,28 @@
+.sass{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.letter{
+    color: antiquewhite;
+}
+
+.sass.services{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sass.components{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.sass.svg{
+    max-width: 30%;
+}
