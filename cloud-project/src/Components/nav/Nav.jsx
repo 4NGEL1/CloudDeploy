@@ -15,7 +15,7 @@ function Nav({profile}){
             <button>Salir</button>
         </Link>
         <Link to='/cloud'>
-            <button>Cloud</button>
+            <button>Pasos</button>
         </Link>
         <Link to='/iass'>
             <button>IasS</button>

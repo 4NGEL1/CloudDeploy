@@ -1,0 +1,28 @@
+.pass{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.letter{
+    color: antiquewhite;
+}
+
+.pass.services{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.pass.components{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.pass.svg{
+    max-width: 30%;
+}
