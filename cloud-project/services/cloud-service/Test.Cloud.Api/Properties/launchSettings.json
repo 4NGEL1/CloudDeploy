@@ -8,11 +8,11 @@
       "applicationUrl": "http://localhost:1221",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "MYSQL_DEPLOYMENT_SERVICE_HOST": "localhost",
-        "MYSQL_DEPLOYMENT_SERVICE_PORT": "3001",
-        "MYSQL_DEPLOYMENT_SERVICE_NAME": "test",
-        "MYSQL_DEPLOYMENT_SERVICE_USER": "root",
-        "MYSQL_DEPLOYMENT_SERVICE_PASSWORD": "admin"
+        "MYSQL_DEPLOYMENT_SERVICE_HOST": "test.cq8hv2lgvg8w.us-east-1.rds.amazonaws.com",
+        "MYSQL_DEPLOYMENT_SERVICE_PORT": "3306",
+        "MYSQL_DEPLOYMENT_SERVICE_NAME": "Test",
+        "MYSQL_DEPLOYMENT_SERVICE_USER": "admin",
+        "MYSQL_DEPLOYMENT_SERVICE_PASSWORD": "Maikol.)9"
       }
     }
   }

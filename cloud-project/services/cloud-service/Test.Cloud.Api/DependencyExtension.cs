@@ -27,8 +27,9 @@ namespace Test.Cloud.Api
             {
                 options.AddPolicy("CorsPolicy", build =>
                 {
-                    build.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+                    build.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().AllowCredentials();
                     build.WithOrigins("http://localhost:8080").AllowAnyMethod().AllowAnyHeader().AllowCredentials();
+                    build.WithOrigins("http://52.54.242.147").AllowAnyMethod().AllowAnyHeader().AllowCredentials();
                 });
             });
 
