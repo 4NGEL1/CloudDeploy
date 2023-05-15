@@ -14,10 +14,8 @@ function Phrase(){
                 let data = JSON.stringify(response.response)
                 let get = JSON.parse(data);
                 phrase = get.frase;
-                console.log(phrase);
             })
         .catch(error => console.log('error', error));
-
     return phrase;
 }
 
