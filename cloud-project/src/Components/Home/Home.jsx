@@ -5,12 +5,29 @@ import AmazonLog from '../../assets/AWS.png';
 import viteLogo from '../../assets/vite.svg';
 import Nav from '../nav/Nav';
 import { useLocation } from 'react-router-dom';
-import Phrase from '../../Services/Phrase';
 
 function Home({profile}){
   let props = useLocation();
-  const [count, setCount] = useState("Something");
+  const [phrase, setPhrase] = useState("Prúebame");
   const [data, setData] = useState();
+
+  var requestOptions = {
+    method: 'GET',
+    redirect: 'follow'
+  };
+  function GetPhrase()
+  { 
+    fetch("http://localhost:1221/phrase", requestOptions)
+        .then(response => response.text())
+        .then(result =>
+            {
+                let response = JSON.parse(result);
+                let data = JSON.stringify(response.response)
+                let get = JSON.parse(data);
+                setPhrase(get.frase);
+            })
+        .catch(error => console.log('error', error));
+  }
   useEffect(() =>{
     let prop = localStorage.getItem("Auth");
     setData(JSON.parse(prop));
@@ -31,11 +48,11 @@ function Home({profile}){
       </div>
       <h1>Vite + React + Cloud</h1>
       <div className="card">
-        <button onClick={() => setCount(Phrase())}>
+        <button onClick={() => GetPhrase()}>
           Voy a tener suerte
         </button>
-        <p>
-          {count}
+        <p className='phrase-style'>
+          {phrase}
         </p>
         <p>
           <code>Hola Mundo</code>

@@ -40,6 +40,20 @@
   .card {
     padding: 2em;
   }
+
+  .phrase-style{
+    padding: 1rem;
+    font-size: x-large;
+    border-width: 3px;
+    border-style: solid;
+    border-color: whitesmoke;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 16px 4px 12px whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   
   .read-the-docs {
     color: #888;

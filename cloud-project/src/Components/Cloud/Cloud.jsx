@@ -1,4 +1,5 @@
 import Nav from '../nav/Nav'
+import Step from '../Steps/steps'
 import { useEffect, useState } from 'react';
 function Cloud(){
     const [data, setData] = useState();
@@ -9,6 +10,7 @@ function Cloud(){
     return(
         <div className="cloud">
             <Nav profile = {data}></Nav>
+            <Step></Step>
         </div>
     );
 }
