@@ -21,7 +21,7 @@ services:
       context: ./cloud-project/services/cloud-service
       dockerfile: ./Dockerfile
     environment:
-      ASPNETCORE_ENVIRONMENT: "Development"
+      ASPNETCORE_ENVIRONMENT: "Local"
       MYSQL_DEPLOYMENT_SERVICE_HOST: "test.cq8hv2lgvg8w.us-east-1.rds.amazonaws.com"
       MYSQL_DEPLOYMENT_SERVICE_PORT: "3306"
       MYSQL_DEPLOYMENT_SERVICE_NAME: "test"

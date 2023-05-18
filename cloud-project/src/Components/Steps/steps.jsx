@@ -26,6 +26,7 @@ import EC2Three from '../../assets/EC2Three.png'
 import EC2Four from '../../assets/EC2Four.png'
 import Connect from '../../assets/Connect.png'
 import ShhOne from '../../assets/ShhOne.png'
+import Project from '../../assets/Proyecto.png'
 function Steps(){
     return(
         <div className='container'>
@@ -140,7 +141,51 @@ function Steps(){
                 Para navegar a la carpeta, tecleamos el comando
                 <p className='code'>cd ./test</p>
                 La cual nos posiiciona dentro de la ruta. Utilizando una herramienta precargada en Ubuntu, obtendremos los ficheros de un repositorio remoto, con la instrucción
-                <p className='code'></p>
+                <p className='code'>git clone https://github.com/4NGEL1/CloudDeploy.git</p>
+                Lo que generara la descarga de los archivos fuentes de la ruta especificada, y los pondrá sobre la ruta actual, es decir en la carpeta test.
+                para comprobarlo, nuevamente lanzamos el comando
+                <p className='code'>ls</p>
+                Lo cual nos devolverá la carpeta CloudDeploy, con lo cual nos posicionaremos sobre dicha ruta, nuevamente aplicando el comando "cd" seguido de la ruta donde queremos ir.
+                <p className='code'>cd ./CloudDeploy</p>
+                Una vez aplicado lo anterior, deberiamos ver el listado de archivos siguiente:
+                <ol>
+                    <li>
+                        README.md
+                    </li>
+                    <li>
+                        cloud-project
+                    </li>
+                    <li>
+                        docker-composer.yaml
+                    </li>
+                    <li>
+                        package-lock.json
+                    </li>
+                    <li>
+                        package.json
+                    </li>
+                </ol>
+                siendo, docker-compose.yaml el archivo de nuestro interes.
+            </div>
+            <div className='container-step'>
+                <b>Configurando Docker</b>
+                Como paso preliminar, se tiene que instalar la herramienta docker
+                Siguiendo, la siguiente lista de comandos
+                <p className='code'>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</p>
+                <p className='code'>add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"</p>
+                <p className='code'>apt update</p>
+                <p className='code'>apt-cache policy docker-ce</p>
+                <p className='code'>apt install docker-ce</p>
+                <p className='code'>apt install docker-ce</p>
+            </div>
+            <div className='container-step'>
+                <b>Levantar el proyecto</b>
+                Lo que resta, es simplemente correr el comando que levantara el proyecto construido
+                <p className='code'>docker compose up -d</p>
+                Esto generara los contenedores que contiene todo lo necesario para correr el proyecto.
+                <img src={Project} className='image-vertical'></img>
+                Solo bastara acceder mediante la IP pública de la instancia, sobre el puerto con el número 8080
+                <img src={Like} className='like'></img>
             </div>
         </div>
     );
